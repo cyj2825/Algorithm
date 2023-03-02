@@ -22,3 +22,5 @@
 
  <p>첫째 줄에 x월 y일이 무슨 요일인지에 따라 SUN, MON, TUE, WED, THU, FRI, SAT중 하나를 출력한다.</p>
 
+### 수정코드
+<img width="523" alt="a" src="https://user-images.githubusercontent.com/80473521/222346692-c3f57f20-4da6-448f-acb1-4ace8e36b99a.PNG">
