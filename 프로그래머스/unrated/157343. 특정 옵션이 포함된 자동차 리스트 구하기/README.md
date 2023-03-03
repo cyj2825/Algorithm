@@ -112,3 +112,6 @@ Empty
       </table>
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+
+### < 특정문자찾기 INSTR 함수 사용 >
+<img width="319" alt="a" src="https://user-images.githubusercontent.com/80473521/222654302-2783305d-6285-4cf1-bc3e-ab63b2eaea91.PNG">
