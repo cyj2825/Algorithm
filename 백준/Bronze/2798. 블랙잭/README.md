@@ -32,5 +32,5 @@
 
  <p>첫째 줄에 M을 넘지 않으면서 M에 최대한 가까운 카드 3장의 합을 출력한다.</p>
 
-### < itertools 라이브러리 사용하여 문제풀기 >
+### < itertools 라이브러리 사용하여 문제 풀기 >
 <img width="282" alt="a" src="https://user-images.githubusercontent.com/80473521/227512756-bdf9de52-4d24-48d3-9b1b-970d01659a65.PNG">
