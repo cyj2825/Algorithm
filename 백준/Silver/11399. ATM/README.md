@@ -28,3 +28,5 @@
 
  <p>첫째 줄에 각 사람이 돈을 인출하는데 필요한 시간의 합의 최솟값을 출력한다.</p>
 
+### < 삽입 정렬 사용하여 문제 풀기 >
+<img width="546" alt="a" src="https://user-images.githubusercontent.com/80473521/228777542-d72d7f03-307a-42e3-893a-6efd70aa2f8a.PNG">
