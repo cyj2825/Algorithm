@@ -22,3 +22,5 @@
 
  <p>첫째 줄에 자리수를 내림차순으로 정렬한 수를 출력한다.</p>
 
+### < 선택 정렬 및 ''.join() 사용 >
+<img width="387" alt="a" src="https://user-images.githubusercontent.com/80473521/228762362-2188a3bd-1774-4842-9f9c-3b1746e4fcbe.PNG">
