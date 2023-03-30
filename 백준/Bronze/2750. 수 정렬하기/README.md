@@ -22,3 +22,5 @@
 
  <p>첫째 줄부터 N개의 줄에 오름차순으로 정렬한 결과를 한 줄에 하나씩 출력한다.</p>
 
+### < 버블 정렬 사용하여 문제 풀기 >
+<img width="518" alt="a" src="https://user-images.githubusercontent.com/80473521/228723196-f8b397d2-a561-4d43-804a-f24939b392bf.PNG">
