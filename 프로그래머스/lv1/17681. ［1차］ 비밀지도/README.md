@@ -95,5 +95,12 @@
       </table>
 <p><a href="http://tech.kakao.com/2017/09/27/kakao-blind-recruitment-round-1/" target="_blank" rel="noopener">해설 보러가기</a></p>
 
+### < 더 간단한 방법의 코드 >
+#### ! 추가로 기억해야 할 부분 !
+* bin(num) 함수 : num(10진수, int값)을 이진수 문자열로 바꿔줌   ex) bin(3) => '0b11'
++ 이 코드에서 bin(~~)[2:] 에서 [2:]을 뒤에 써준 이유는 bin함수를 이용해 이진수 문자열로 바꾸게 되면 항상 '0b'가 앞에 붙기 때문
+* rjust(전체 자리 숫자, 숫자 공백이 있을 경우 공백을 채울 텍스트) : 오른쪽으로 정렬해서 출력   ex) '11'.rjust(5, '0') => '00011' 
+<img width="608" alt="a" src="https://user-images.githubusercontent.com/80473521/229288908-921a4542-eadb-4f13-b152-d14e8868a472.PNG">
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
