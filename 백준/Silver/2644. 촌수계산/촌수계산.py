@@ -1,4 +1,3 @@
-# 다시보기
 # 너비 우선 탐색 사용
 import sys
 from collections import deque
