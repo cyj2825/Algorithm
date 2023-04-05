@@ -63,3 +63,6 @@
 
  <p>첫째 줄에 지나야 하는 최소의 칸 수를 출력한다. 항상 도착위치로 이동할 수 있는 경우만 입력으로 주어진다.</p>
 
+### < 더 간단한 코드로 수정 >
+#### * BFS 함수 while문 안에 있는 if문 3개를 1개의 if문으로 더 간략하게 수정
+<img width="369" alt="a" src="https://user-images.githubusercontent.com/80473521/230024849-b32924f1-4170-4d6d-bc07-7a08894b03be.PNG">
