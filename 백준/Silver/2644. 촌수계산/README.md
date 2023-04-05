@@ -26,6 +26,6 @@
 
  <p>입력에서 요구한 두 사람의 촌수를 나타내는 정수를 출력한다. 어떤 경우에는 두 사람의 친척 관계가 전혀 없어 촌수를 계산할 수 없을 때가 있다. 이때에는 -1을 출력해야 한다.</p>
 
-### < 깊이 우선 탐색(DFS) 사용 >
+### < 너비 우선 탐색(FS) 사용 >
 <img width="403" alt="b" src="https://user-images.githubusercontent.com/80473521/229787296-97a3aa61-072a-4bff-83c8-fedca0fd8cd6.PNG">
 <img width="492" alt="b1" src="https://user-images.githubusercontent.com/80473521/229787317-42e6e26e-111b-492a-83cb-4edcf297d6f1.PNG">
