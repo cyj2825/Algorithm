@@ -30,4 +30,9 @@
 ### 출력 
 
  <p>첫째 줄에 N자리 이친수의 개수를 출력한다.</p>
+ 
+ ### < 아래와 같은 규칙을 가지고 점화식 세워 구현하는 방법 >
+<img width="346" alt="a" src="https://user-images.githubusercontent.com/80473521/234257300-4a36be3c-edfa-48f4-84d6-88bdd212ba85.PNG">
+<img width="399" alt="a1" src="https://user-images.githubusercontent.com/80473521/234257328-f9fa24b3-105e-46b5-8d86-a0565c441b2c.PNG">
+
 
