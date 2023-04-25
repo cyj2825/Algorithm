@@ -258,5 +258,6 @@ Empty
 
 <p><code>CREATED_DATE</code>의 포맷이 예시의 포맷과 일치해야 정답처리 됩니다.</p>
 
+### * 댓글 ID, 댓글 작성자 ID, 댓글 내용, 댓글 작성일 -> B 테이블에서 추출 해야 함
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
