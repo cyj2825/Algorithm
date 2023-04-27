@@ -5,7 +5,6 @@ def solution(n, computers):
     answer = 0
     
     def BFS(a):
-        nonlocal n, visited
         q = deque()
         q.append(a)
         visited[a] = True
