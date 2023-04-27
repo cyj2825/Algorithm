@@ -59,5 +59,7 @@ Empty
 아래와 같이 1개의 네트워크가 있습니다.<br>
   <img src="https://grepp-programmers.s3.amazonaws.com/files/ybm/7554746da2/edb61632-59f4-4799-9154-de9ca98c9e55.png" title="" alt="image1.png"></p>
 
+#### < DFS로 문제 풀기 >
+<img width="364" alt="a" src="https://user-images.githubusercontent.com/80473521/234747120-7641544d-d802-4148-9f80-c601ec297b0b.PNG">
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
