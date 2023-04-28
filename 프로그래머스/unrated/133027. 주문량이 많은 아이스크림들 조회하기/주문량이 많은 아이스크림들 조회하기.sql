@@ -1,5 +1,7 @@
 SELECT A.FLAVOR
 FROM FIRST_HALF A JOIN JULY B ON A.FLAVOR = B.FLAVOR
+# 먼저 A.FLAVOR로 그룹 짓고 총 주문량 계산하기
 GROUP BY A.FLAVOR
+# 총 주문량을 구할 때도 꼭 sum함수를 이용하여 구해야 함
 ORDER BY sum(A.TOTAL_ORDER) + sum(B.TOTAL_ORDER) DESC
 LIMIT 3
