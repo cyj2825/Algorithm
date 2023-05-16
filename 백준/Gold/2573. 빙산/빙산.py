@@ -9,6 +9,7 @@ data = [list(map(int, input().split())) for _ in range(n)]
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 year = 0
+
 # 빙산 있는 위치만 탐색하기 위해 ice에 빙산 위치를 저장
 ice = []
 for i in range(n):
@@ -39,17 +40,16 @@ def BFS(a, b):
                 elif data[nx][ny] and not visited[nx][ny]:
                     q.append((nx, ny))
                     visited[nx][ny] = 1
-
         # 주변에 바다가 존재할 경우 seaList에 위치값 x, y와 바다 수 저장
         if sea > 0:
             seaList.append((x, y, sea))
+            
     # 연결된 모든 빙산의 탐색이 끝났을 경우 저장해 둔 바다 수를 data값에서 빼기
     # 무조건 0 값이상이어야 하므로 max 사용
     for x, y, sea in seaList:
         data[x][y] = max(0, data[x][y] - sea)
     # group으로 빙산 수를 세야 하므로 return 1
     return 1
-
 
 # 현재 바다가 아닌 빙산인 값들 BFS 실행
 while ice:
@@ -71,6 +71,7 @@ while ice:
     # 다 녹은 빙산은 탐색할 필요가 없으므로 ice에서 제거
     ice = sorted(list(set(ice) - set(delList)))
     year += 1
+    
 # 빙산이 다 녹을 때까지 분리되지 않으면 0 출력
 if group < 2:
     print(0)
