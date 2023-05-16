@@ -15,14 +15,12 @@ def solution(park, routes):
         n = int(i[-1])
         nx = x + d[op][0] * n
         ny = y + d[op][1] * n
-        # print(nx, ny)
         if 0 > nx or nx >= H or 0 > ny or ny >= W:
             continue
         a, b = x, y
         for _ in range(n):
             a += d[op][0]
             b += d[op][1]
-            print(a, b)
             if park[a][b] == 'X':
                 isPossible = False
                 break
@@ -30,7 +28,6 @@ def solution(park, routes):
             isPossible = True
             continue
         x, y = nx, ny
-        # print(x, y)
         answer[0] = x
         answer[1] = y
     return answer
