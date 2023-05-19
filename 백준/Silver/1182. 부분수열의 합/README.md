@@ -21,4 +21,8 @@
 ### 출력 
 
  <p>첫째 줄에 합이 S가 되는 부분수열의 개수를 출력한다.</p>
+ 
+### 다른 풀이 방법
+#### < 조합을 이용한 브루트포스 방식 >
+<img width="460" alt="a" src="https://github.com/cyj2825/Algorithm/assets/80473521/854310eb-091e-4ead-a1b7-a6878b47d547">
 
