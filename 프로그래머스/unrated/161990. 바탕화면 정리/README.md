@@ -120,3 +120,6 @@ Empty
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
+
+### < 더 간단한 풀이 방법 >
+<img width="331" alt="a" src="https://github.com/cyj2825/Algorithm/assets/80473521/260292dd-507f-416b-89c4-9be7d88caf30">
