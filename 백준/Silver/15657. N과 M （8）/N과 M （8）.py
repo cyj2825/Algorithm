@@ -1,11 +1,17 @@
-# 중복조합 사용
-from itertools import combinations_with_replacement
+# 재귀 사용
 import sys
 input = sys.stdin.readline
 n, m = map(int, input().split())
 data = sorted(list(map(int, input().split())))
+result = []
 
-for numbers in combinations_with_replacement(data, m):
-    for num in numbers:
-        print(num, end = ' ')
-    print()
+def DFS(s):
+    if len(result) == m:
+        print(*result)
+        return
+    for i in range(s, n):
+        result.append(data[i])
+        DFS(i)
+        result.pop()
+        
+DFS(0)
