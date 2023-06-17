@@ -73,5 +73,9 @@ Empty
 <p>입출력 예 #2<br>
 설명 생략</p>
 
+### < dictionary를 사용하여 문제 풀기 >
+
+<img width="282" alt="a1" src="https://github.com/cyj2825/Algorithm/assets/80473521/7fc0f71a-f67b-415d-af85-d5aa5937e2f7">
+<hr>
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
