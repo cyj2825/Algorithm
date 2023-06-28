@@ -1,5 +1,4 @@
 def solution(number, limit, power):
-    # answer = 0
     result = []
     # 각 기사단원의 정수 값에 대한 약수 개수 구하기
     for i in range(1, number+1):
