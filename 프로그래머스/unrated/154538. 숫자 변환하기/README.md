@@ -79,5 +79,8 @@ Empty
 <p>입출력 예 #3<br>
 <code>x</code>를 <code>y</code>로 변환할 수 없기 때문에 -1을 return합니다.</p>
 
+### < BFS를 이용하여 완전 탐색으로 푸는 방법 >
+<img width="469" alt="a" src="https://github.com/cyj2825/Algorithm/assets/80473521/5485d549-0d9f-4c76-b05f-7d647002e530">
+
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
