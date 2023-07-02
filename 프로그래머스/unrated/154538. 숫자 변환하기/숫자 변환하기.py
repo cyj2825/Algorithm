@@ -1,22 +1,22 @@
-from collections import deque
-
 def solution(x, y, n):
-    q = deque()
-    # q에는 현재 값인 x와 지금까지 진행한 연산 횟수를 넣어준다
-    q.append((x, 0))
-    # 중복값 저장을 방지하기 위해 set() 함수 사용
-    visited = set()
-    
-    while q:
-        a, b = q.popleft()
-        # 만약 a값이 y보다 크거나 이미 계산된 적이 있는 값일 경우 다시 popleft 진행
-        if a > y or a in visited:
+    answer = 0
+    MAX = 1e9
+    # 큰 값으로 초기화
+    dp = [MAX] * (y + 1)
+    # 가장 처음 값인 x는 아직 연산이 한 번도 진행되지 않았으므로 0을 넣는다
+    dp[x] = 0
+    for i in range (x, y + 1):
+        # 현재 계산하는 값이 MAX일 경우 도달할 수 없는 수이기 때문에 continue
+        if dp[i] == MAX:
             continue
-        visited.add(a)
-        # 만약 a값이 y값이 되었을 경우 지금까지 진행한 연산 횟수 값이 j를 return
-        if a == y:
-            return b
-        for i in (a * 3, a * 2, a + n):
-            if i <= y and i not in visited:
-                q.append((i, b + 1))
-    return -1
+        # 현재까지 도달하는데 연산 수 + 1과 도달할 수에 저장된 값을 비교하여 작은 값을 현재 연산 수로 저장
+        if i + n <= y:
+            dp[i + n] = min(dp[i + n], dp[i] + 1)
+        if i * 2 <= y:
+            dp[i * 2] = min(dp[i * 2], dp[i] + 1)
+        if i * 3 <= y:
+            dp[i * 3] = min(dp[i * 3], dp[i] + 1)
+    # 연산수를 구해야 하는 최종값이 MAX일 경우는 x를 y로 만들 수 없는 경우이므로 -1를 return
+    if dp[y] == MAX:
+        return -1
+    return dp[y]
