@@ -10,11 +10,11 @@ class Solution
 
 		for(int t = 1; t <= T; t++)
 		{
-            // 최댓값 저장하기
-            int max = 0;
-            // 10개의 입력값 받기
-            for (int i = 0; i < 10; i++) {
-                // 입력받는수와 현재max값과 비교
+            		// 최댓값 저장하기
+            		int max = 0;
+            		// 10개의 입력값 받기
+            		for (int i = 0; i < 10; i++) {
+                		// 입력받는수와 현재max값과 비교
 				max = Math.max(max, sc.nextInt());
 			}
 			System.out.printf("#%d %d\n", t, max);
