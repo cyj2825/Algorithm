@@ -21,30 +21,20 @@ public class Main {
         	int a = Integer.parseInt(st.nextToken());
         	int b = Integer.parseInt(st.nextToken());
         	
-        	// 남자의 경우
         	if(a == 1) {
             	for(int x = b; x < n + 1; x+= b) {
-            		if(data[x] == 0) data[x] = 1;
-            		else if(data[x] == 1) data[x] = 0;
+                    data[x] ^= 1;
             	}
         	}
-        	// 여자의 경우
         	else if(a == 2) {
-            	if(data[b] == 0) data[b] = 1;
-        		else if(data[b] == 1) data[b] = 0;
-            	
+            	data[b] ^= 1;
+                
             	// 받은 자연수를 기준으로 대칭 스위치 값 변경
             	int cnt = 1;
             	while((b - cnt) > 0 && (b + cnt) < n + 1) {
             		if(data[b + cnt] == data[b - cnt]) {
-            			if(data[b - cnt] == 0) {
-            				data[b + cnt] = 1;
-            				data[b - cnt] = 1;
-            			}
-            			else if(data[b - cnt] == 1) {
-            				data[b + cnt] = 0;
-            				data[b - cnt] = 0;
-            			}
+                        data[b + cnt] ^= 1;
+                        data[b - cnt] ^= 1;
             			cnt++;
             		}
             		else {
