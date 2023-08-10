@@ -8,7 +8,6 @@ public class Main {
     static int[][] operation;
     static int[][] data;
     static int minVal = 987654321;
-    static boolean[] visited;
     static int[] arr;
     
     public static void main(String[] args) throws IOException {
@@ -19,7 +18,6 @@ public class Main {
         K = Integer.parseInt(st.nextToken());
         data = new int[N][M];
         operation = new int[K][3];
-        visited = new boolean[K];
         arr = new int[K];
 
         for(int i=0; i<N; i++) {
@@ -80,12 +78,14 @@ public class Main {
                     tempData[x][c+j] = tempData[x-1][c+j];
                 }
                 tempData[r-j+1][c+j] = upTmp;
+                
                 // 맨 아래 가로
                 int leftTmp = tempData[r+j][c-j];
                 for(int y = c-j; y < c+j; y++) {
                     tempData[r+j][y] = tempData[r+j][y+1];
                 }
                 tempData[r+j][c+j-1] = rightTmp;
+                
                 // 맨 왼쪽 세로
                 for(int x = r-j; x < r+j; x++) {
                     tempData[x][c-j] = tempData[x+1][c-j];
@@ -98,7 +98,7 @@ public class Main {
             for(int j=0; j<M; j++) {
                 sum += tempData[i][j];
             }
-            if(minVal > sum) minVal = sum;
+            minVal = Math.min(minVal, sum);
         }
     }
 }
