@@ -4,38 +4,71 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Main {
+
+	static int[] state; // 스위치 상태
+	static int student; // 학생 수
 	
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  
         int n = Integer.parseInt(br.readLine());
-        int[] data = new int[n + 1];
+        
+        // 스위치 상태 입력
+        state = new int[n + 1];
         StringTokenizer st = new StringTokenizer(br.readLine());
-        // 스위치 상태 데이터 입력 받기
-        for(int i = 1; i < n + 1; i++) {
-        	data[i] = Integer.parseInt(st.nextToken());
+        for(int i = 1; i < state.length; i++) {
+        	state[i] = Integer.parseInt(st.nextToken());
         }
         
-        int studentN = Integer.parseInt(br.readLine());
-        for(int i = 0; i < studentN; i++) {
+        // 학생수 입력
+        student = Integer.parseInt(br.readLine());
+        
+        // 학생 스위치 처리
+        for(int i = 0; i < student; i++) {
         	st = new StringTokenizer(br.readLine());
+        	
         	int a = Integer.parseInt(st.nextToken());
         	int b = Integer.parseInt(st.nextToken());
         	
+        	// 남자
         	if(a == 1) {
-            	for(int x = b; x < n + 1; x+= b) {
-                    data[x] ^= 1;
+        		int cur = b;
+            	// 배수 번호 스위치 상태 반대로 변경
+            	while(cur < state.length) {
+            		if(state[cur] == 0) {
+            			state[cur] = 1;
+            		}
+            		else if(state[cur] == 1) {
+            			state[cur] = 0;
+            		}
+            		cur += b;
             	}
         	}
+        	// 여자
         	else if(a == 2) {
-            	data[b] ^= 1;
-                
-            	// 받은 자연수를 기준으로 대칭 스위치 값 변경
-            	int cnt = 1;
-            	while((b - cnt) > 0 && (b + cnt) < n + 1) {
-            		if(data[b + cnt] == data[b - cnt]) {
-                        data[b + cnt] ^= 1;
-                        data[b - cnt] ^= 1;
-            			cnt++;
+        		// 현재 위치 스위치 상태 반대로 변경
+            	if(state[b] == 0) {
+        			state[b] = 1;
+        		}
+        		else if(state[b] == 1) {
+        			state[b] = 0;
+        		}
+            	
+            	// 대칭 스위치 반대로 변경
+            	int count = 1;
+            	while((b - count) > 0 && (b + count) < state.length) {
+            		if(state[b + count] == state[b - count]) {
+            			
+            			if(state[b + count] == 0) {
+            				state[b + count] = 1;
+            				state[b - count] = 1;
+            			}
+            			else if(state[b + count] == 1) {
+            				state[b + count] = 0;
+            				state[b - count] = 0;
+            			}
+            			count++;
+            			
             		}
             		else {
             			break;
@@ -44,9 +77,8 @@ public class Main {
         	}
         }
         
-        for(int i = 1; i < n + 1; i++) {
-        	System.out.print(data[i] + " ");
-            // 마지막 스위치까지 한 줄에 20개씩 출력 조건
+        for(int i = 1; i < state.length; i++) {
+        	System.out.print(state[i] + " ");
         	if(i % 20 == 0) {
         		System.out.println();
         	}
