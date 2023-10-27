@@ -1,0 +1,5 @@
+select A.FLAVOR
+from FIRST_HALF A join JULY B on A.FLAVOR = B.FLAVOR
+group by A.FLAVOR
+order by sum(A.TOTAL_ORDER + B.TOTAL_ORDER) DESC
+LIMIT 3
